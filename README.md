@@ -51,3 +51,8 @@ work because the page uses ES modules.)
   - [SortableJS](https://sortablejs.github.io/Sortable/) 1.15.7 (MIT) — drag & drop
 
 The page is deployed by GitHub Pages straight from the `master` branch.
+
+## License
+
+[MIT](LICENSE). The libraries under `vendor/` keep their own licenses, included
+alongside them.
