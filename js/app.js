@@ -203,6 +203,7 @@ function cardFor(page) {
       <canvas class="pending" width="283" height="400"></canvas>
       <span class="check"></span>
       <div class="card-actions">
+        <button class="card-btn" type="button" data-act="rotate-left" title="Rotate left" aria-label="Rotate left">${icon('rot-l')}</button>
         <button class="card-btn" type="button" data-act="rotate" title="Rotate right" aria-label="Rotate right">${icon('rot-r')}</button>
         <button class="card-btn" type="button" data-act="preview" title="Preview" aria-label="Preview">${icon('zoom')}</button>
         <button class="card-btn" type="button" data-act="delete" title="Delete page" aria-label="Delete page">${icon('trash')}</button>
@@ -445,6 +446,7 @@ grid.addEventListener('click', (e) => {
   const id = btn.closest('.card').dataset.id;
   const ids = new Set([id]);
   if (btn.dataset.act === 'rotate') rotate(ids, 90);
+  else if (btn.dataset.act === 'rotate-left') rotate(ids, -90);
   else if (btn.dataset.act === 'delete') remove(ids);
   else if (btn.dataset.act === 'preview') showPreview(id);
 });
